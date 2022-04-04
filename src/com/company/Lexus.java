@@ -1,14 +1,21 @@
 package com.company;
 
-public class Lexus extends Car implements Printable{
-    public String model = "LX 570";
-    public int maxSpeed = 220;
-    public double volume = 5.7;
+public class Lexus extends Car{
+    private String model;
+    private int maxSpeed;
+    private double volume;
+
+    public Lexus(String name, String model, int maxSpeed, double volume) {
+        super(name);
+        this.model = model;
+        this.maxSpeed = maxSpeed;
+        this.volume = volume;
+    }
 
     @Override
     public void print() {
         System.out.println("Model: " + model +
-                "\nMaxSpeed: " + maxSpeed +
+                "\nMax Speed: " + maxSpeed +
                 "\nVolume: " + volume);
     }
 }
